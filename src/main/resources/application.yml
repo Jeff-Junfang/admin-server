@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+# 应用名称
+spring:
+  application:
+    name: admin-server
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        passwore: nacos
+        server-address: 127.0.0.1:8848
+        namespace: public
+  security:
+    user:
+      name: admin
+      password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+#logging:
+#  file: /home/java/admin.log
